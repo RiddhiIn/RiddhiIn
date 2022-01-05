@@ -2,7 +2,7 @@
   <v-card
     class="mx-auto"
   >
-    <v-app-bar
+    <!-- <v-app-bar
     >
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
@@ -13,7 +13,7 @@
       <v-btn icon>
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
-    </v-app-bar>
+    </v-app-bar> -->
 
     <v-container class="elevation-0">
       <v-row dense>
@@ -37,18 +37,18 @@
             </v-card-title>
             <v-card-actions>
                 <v-row style="flex-wrap: nowrap;overflow-x: auto;">
-                    <v-card v-for="(item, index) in exclusiveApps" :key="index" class="mx-auto elevation-0 px-2"
-    max-width="120">
+                    <v-card v-for="(item, index) in exclusiveApps" :key="index" class="mx-auto elevation-0 px-1"
+    max-width="80">
 
     <v-img
       :src="item.src"
-     width="104"
-      height="104" 
+     width="72"
+      height="72" 
     ></v-img>
 
-    <v-card-title v-text="item.title" class="justify-center text-truncate apps-title" text-center
+    <v-card-title v-text="item.title" class="text-truncate apps-title" text-center
       wrap></v-card-title>
-    <div class="apps-subtitle"><span class="text-center mx-7"> {{ item.size }}</span></div>
+    <div class="apps-subtitle"><span class="text-center mx-5"> {{ item.size }}</span></div>
     <v-card-actions>
         <v-btn
         height="28px"
@@ -69,27 +69,31 @@
      <v-col cols="12">
           <v-card class="elevation-0 social-card"
           >
-            <v-card-title style="padding-left:0px;">
+            <v-card-title style="padding-left:0px;font-size:1rem !important">
                Your Friends Choice
               <v-spacer></v-spacer>
-                    <v-btn text>
-                    <span>More</span>
-                </v-btn>
+                <span style="font-size:0.8rem !important;opacity:0.7">More</span>
             </v-card-title>
+            <div class="text-subtitle-1 pt-2 pb-3">
+                  <v-img
+                  width="230"
+                    :src="require('../assets/images/frnds.png')"
+                  ></v-img>
+            </div>
             <v-card-actions>
                 <v-row style="flex-wrap: nowrap;overflow-x: auto;">
-                    <v-card v-for="(item, index) in exclusiveApps" :key="index" class="mx-auto elevation-0 px-2 social-card-apps"
-    max-width="120">
+                    <v-card v-for="(item, index) in friendsChoice" :key="index" class="mx-auto elevation-0 px-2 social-card-apps" width="120">
 
     <v-img
       :src="item.src"
-     width="104"
-      height="104" 
+     width="80"
+      height="80"
+      style="display:block;margin:auto;margin-top:10px"
     ></v-img>
 
-    <v-card-title v-text="item.title" class="justify-center text-truncate apps-title" text-center
+    <v-card-title v-text="item.title" class="justify-center text-truncate apps-title width-100" text-center
       wrap></v-card-title>
-    <div class="apps-subtitle">
+    <div class="apps-subtitle width-100">
         <v-rating
           :value="1"
           color="amber"
@@ -98,7 +102,7 @@
           size="14"
           length="1"
           style="display:inline-block"
-        ></v-rating> <span style="color:#ffb74d"> 4.2 </span> | <span class="text-center"> {{ item.size }}</span><v-icon class="ml-1">mdi-download</v-icon></div>
+        ></v-rating> <span style="color:#ffb74d"> 4.2 </span> | <span class="text-center"> {{ item.size }}</span><v-icon class="ml-5" small>mdi-download</v-icon></div>
 
                     </v-card>
                 </v-row>
@@ -119,7 +123,7 @@
             <v-card-actions>
                 <v-row style="flex-wrap: nowrap;overflow-x: auto;">
                     <v-card v-for="(item, index) in christmasSpecial" :key="index" class="mx-auto elevation-0 px-2"
-    max-width="178">
+    max-width="170">
 
     <v-img
       :src="item.src"
@@ -144,17 +148,17 @@
             <v-card-actions>
                 <v-row style="flex-wrap: nowrap;overflow-x: auto;">
                     <v-card v-for="(item, index) in editorsChoice" :key="index" class="mx-auto elevation-0 px-2"
-    max-width="120">
+    max-width="80">
 
     <v-img
       :src="item.src"
-       width="104"
-      height="104"
+       width="72"
+      height="72"
     ></v-img>
 
-    <v-card-title v-text="item.title" class="justify-center text-truncate apps-title" text-center
+    <v-card-title v-text="item.title" class="text-truncate apps-title" text-center
       wrap></v-card-title>
-    <div class="mx-2 apps-subtitle">
+    <div class="apps-subtitle">
         <v-rating
           :value="1"
           color="amber"
@@ -195,7 +199,7 @@
         },
         {
           src: require('../assets/images/seventh.jpg'),
-          title: 'Team 11',
+          title: 'Spin and Win',
           size: '9 MB',
         },
         {
@@ -205,8 +209,20 @@
         },
         {
           src: require('../assets/images/ninth.jpg'),
-          title: 'Team 11',
+          title: 'My Team 11',
           size: '9 MB',
+        },
+        {
+          src: require('../assets/images/tenth.jpg'),
+          title: 'Make Mytrip',
+          size: '8 MB',
+          rating: 4.2
+        },
+        {
+          src: require('../assets/images/eleventh.jpg'),
+          title: 'Akash Institute',
+          size: '9 MB',
+          rating: 4.2
         },
       ],
       christmasSpecial: [
@@ -244,7 +260,7 @@
           title: 'Farmiso',
           size: '14 MB',
           rating: 4.2
-},
+        },
         {
           src: require('../assets/images/thirtheenth.jpg'),
           title: 'Olx: Buy & Sell',
@@ -252,19 +268,45 @@
           rating: 4.2
         },
       ],
+      friendsChoice: [
+        {
+          src: require('../assets/images/fourth.png'),
+          title: 'Candy Crush Saga',
+          size: '18 MB',
+        },
+        {
+          src: require('../assets/images/fifth.png'),
+          title: 'Amazon music',
+          size: '18 MB',
+        },
+        {
+          src: require('../assets/images/sixth.jpg'),
+          title: 'Teen Patti',
+          size: '8 MB',
+        },
+        {
+          src: require('../assets/images/seventh.jpg'),
+          title: 'Team 11',
+          size: '9 MB',
+        },
+      ]
     }),
   }
 </script>t
 <style scoped>
     .v-card__title {
-        font-size: 1.2rem !important;
+        font-size: 1.1rem !important;
+        line-height: 1rem !important;
+        padding-bottom: 0 !important;
     }
     .apps-title {
-        font-size: 1rem !important;
-        padding: 3px 16px 0px 16px !important;
+        font-size: 0.8rem !important;
+        padding: 3px 16px 0px 5px !important;
+        display: inline-block !important;
+        width: 78px;
     }
     .apps-subtitle {
-        font-size: 0.7rem !important;
+        font-size: 0.6rem !important;
         color: #252525bf;
     }
     .v-chip.v-chip--label {
@@ -285,5 +327,14 @@
     .app-chip {
         height: 24px !important;
         font-size: 11px !important;
+    }
+    .v-card__actions .v-btn.v-btn {
+      padding: 0 !important;
+      margin-left: -4px !important;
+      min-width: 68px !important;
+      border-radius: 7px !important;
+    }
+    .width-100 {
+      width: 110px !important;
     }
 </style>

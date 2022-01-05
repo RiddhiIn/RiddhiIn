@@ -20,7 +20,7 @@
         <v-col cols="12">
           <v-card class="elevation-0"
           >
-            <v-card-title style="padding-left:0px;">
+            <v-card-title style="padding-left:0px;padding-right:0px;">
               <v-chip
       class="ma-2 app-chip"
       color="orange"
@@ -48,7 +48,7 @@
 
     <v-card-title v-text="item.title" class="justify-center text-truncate apps-title" text-center
       wrap></v-card-title>
-    <v-card-subtitle class="apps-subtitle"><span class="text-center mx-7"> {{ item.size }}</span></v-card-subtitle>
+    <div class="apps-subtitle"><span class="text-center mx-7"> {{ item.size }}</span></div>
     <v-card-actions>
         <v-btn
         height="28px"
@@ -73,7 +73,7 @@
                Your Friends Choice
               <v-spacer></v-spacer>
                     <v-btn text>
-                    <v-text>More</v-text>
+                    <span>More</span>
                 </v-btn>
             </v-card-title>
             <v-card-actions>
@@ -89,7 +89,7 @@
 
     <v-card-title v-text="item.title" class="justify-center text-truncate apps-title" text-center
       wrap></v-card-title>
-    <v-card-subtitle class="apps-subtitle">
+    <div class="apps-subtitle">
         <v-rating
           :value="1"
           color="amber"
@@ -98,7 +98,7 @@
           size="14"
           length="1"
           style="display:inline-block"
-        ></v-rating> <span style="color:#ffb74d"> 4.2 </span> | <span class="text-center"> {{ item.size }}</span><v-icon class="ml-1">mdi-download</v-icon></v-card-subtitle>
+        ></v-rating> <span style="color:#ffb74d"> 4.2 </span> | <span class="text-center"> {{ item.size }}</span><v-icon class="ml-1">mdi-download</v-icon></div>
 
                     </v-card>
                 </v-row>
@@ -154,7 +154,7 @@
 
     <v-card-title v-text="item.title" class="justify-center text-truncate apps-title" text-center
       wrap></v-card-title>
-    <v-card-subtitle class="mx-2 apps-subtitle">
+    <div class="mx-2 apps-subtitle">
         <v-rating
           :value="1"
           color="amber"
@@ -163,7 +163,7 @@
           size="14"
           length="1"
           style="display:inline-block"
-        ></v-rating> <span style="color:#ffb74d"> {{ item.rating }}</span> | <span class="text-center"> {{ item.size }}</span></v-card-subtitle>
+        ></v-rating> <span style="color:#ffb74d"> {{ item.rating }}</span> | <span class="text-center"> {{ item.size }}</span></div>
     <v-card-actions>
         <v-btn
         height="28px"

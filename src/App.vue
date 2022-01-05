@@ -11,7 +11,7 @@
 </style>
 <template>
   <v-app>
-    <v-content class="pt-4">
+    <v-content>
       <AppsList/>
     </v-content>
   </v-app>
